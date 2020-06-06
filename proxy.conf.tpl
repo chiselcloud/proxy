@@ -1,5 +1,6 @@
 server {
-    listen $__PORT__$;
+    resolver 88.80.70.7;
+    listen $__PORT__$ default_server;
 
     location / {
         add_header 'Access-Control-Allow-Credentials' 'true';

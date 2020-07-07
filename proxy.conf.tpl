@@ -22,6 +22,7 @@ server {
         proxy_set_header Host $proxy_host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_pass $http_x_chisel_proxied_url;
+        proxy_ssl_server_name on;
         proxy_hide_header 'access-control-allow-origin';
         add_header 'access-control-allow-origin' 'https://chisel.cloud';
     }
